@@ -20,19 +20,23 @@
     --verde-pixelV: #00C621;
     --roxo-pixelV: #4700CF;
     --fundo-site: #e5fcf5;
-    --contato: #E5E5E5;
+    --contato: #E5FCF5;
     --verde-botão: #d4f9e1;
 
 }
 
 
-
+.container-grid{
+    width: 80vw;
+    max-width: 1300px;
+    margin: 0 auto;
+}
 
 
 
 .titulo {
     display: flex;
-    font-family: "Recursive", sans-linear-bold;
+    font-family: "Recursive", sans-linear;
     font-weight: 600;
     font-size: 35px;
 }
@@ -45,6 +49,7 @@
     margin-bottom: 0;
 
     padding: 10px 18px;
+    font-family: "Jost", sans-linear;
 }
 
 /* ------------------Header----------------- */
@@ -92,18 +97,17 @@ header img {
 
 .conteudo-banner {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    
     margin: 10%;
 }
 
 
 .conteudo-banner p {
     font-size: 30px;
-    font-family: "Jost", regular;
+    font-family: "Berlin Sans FB Demi Bold", regular;
     color: var(--branco);
     width: 800px;
-    margin-bottom: 10px;
+
 }
 
 .conteudo-banner ul {
@@ -114,7 +118,7 @@ header img {
     color: var(--verde-pixelV);
     list-style-type: none;
     padding: 0;
-    margin-bottom: 16px;
+
 }
 
 .container-grid button {
@@ -142,24 +146,281 @@ header img {
     display: flex;
     align-items: center;
     gap: 80px;
+    
     margin-top: 120px;
-    margin-bottom: 120px;
+    margin-bottom: 120px
+    
 }
 
 #sobre img {
-    max-width: 460px;
-    width: 40%;
+    max-height: 550px;
+    
+    
     border-radius: 40px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-#sobre h2 {
+#sobre p {
+    font-family: "Jost", regular;
+    font-size: 30px;
+    text-align: justify;
+}
+
+
+
+/* -----------parallax--------- */
+#parallax {
+    height: 250px;
+    /* background-image: url(./img/parallax.svg); */
+
+    background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./IMG/parallax.svg);
+
+    margin-bottom: 120px;
+
+    background-attachment: fixed;
+
+}
+
+
+
+/* --------servicos------- */
+
+#servicos{
+    margin-bottom: 120px;
+}
+
+#servicos .titulo{
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+#servicos h2{
+    margin-left: 5px;
+}
+
+.container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+#servicos img {
+    width: 400px;
+
+}
+
+/* --------cases-------- */
+
+#cases h2{
     margin-right: 5px;
 }
 
-#sobre p {
+#cases{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 120px;
+}
+
+#cases img{
+    height: 300px;
+    border-radius: 40px;
+}
+
+#meuCarrossel{
+    max-width: 1170px;
+    width: 90%;
+}
+
+/* ---------contato--------- */
+
+#contato {
+    text-align: center;
+    padding-bottom: 100px;
+    margin-top: 100px;
+}
+
+#contato .titulo{
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+#contato h2{
+    margin-left: 5px;
+}
+
+#contato form{
+    max-width: 900px;
+    width: 90%;
+
+    margin: 0 auto;
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: solid 3px var(--verde-pixelV);
+    border-radius: 40px;
+    background-color: var(--contato);
+
+    color: var(--preto);
+    font-family: "Jost",regular ;
+    font-size: 22px;
+}
+
+.campo{
+    width: 60%;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.campo-descricao {
+    width: 60%;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.campo input{
+    height: 40px;
+
+    color: var(--preto);
+    background-color: var(--branco);
+
+    border: none;
+    border-radius: 4px;
+
+    text-indent: 10px;
+    outline: none;
+}
+
+.campo-descricao textarea{
+    color: var(--preto);
+    background-color: var(--branco);
+
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+
+    resize: none;
+}
+
+.campo label,
+.campo-descricao label{
+    margin-bottom: 15px;
+}
+
+.campo input,
+.campo-descricao textarea{
+    font-family: "Jost", regular;
+    font-size: 17px;
+}
+
+.campo input::placeholder,
+.campo-descricao textarea::placeholder{
+    color: #A0A0A0;
+}
+
+.campo input:focus,
+.campo-descricao textarea:focus{
+    outline: 2px solid var(--verde-pixelV);
+}
+
+#contato form button{
+    height: 40px;
+    width: 60%;
+
+    background-color: #297A36;
+    color: var(--branco);
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 17px;
+    font-family: "Recursive", sans-linear-bold;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: background-color 500ms;
+}
+
+#contato form button:hover{
+    background-color: var(--verde-pixelV);
+}
+
+/* -----------footer-------- */
+
+footer{
+    height: 250px;
+    background-image: url(./img/footer.png);
+}
+
+footer img{
+    height: 90px;
+}
+
+footer .container-grid{
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais{
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.redes-sociais p{
+    color: var(--preto);
+
     font-family: "Recursive", sans-linear;
-    font-size: 20px;
-    text-align: justify;
-    margin-top: 30px;
+    font-size: 24px;
+}
+
+.icones-redes {
+    width: 240px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones-redes a{
+    color: var(--preto);
+}
+
+.icones-redes a:hover{
+    color: var(--verde-pixelV);
+}
+ /* ------- Menu Hamburguer ------------------ */
+
+.menu-fechado{
+    display: none;
+}
+
+#icone-barras,
+#icone-x{
+    display: none;
 }
