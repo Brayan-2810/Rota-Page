@@ -17,8 +17,7 @@
 :root {
     --branco: #FFFFFF;
     --preto: #000000;
-    --verde-pixelV: #00C621;
-    --roxo-pixelV: #4700CF;
+    --verde-rotaS: #00C621;
     --fundo-site: #e5fcf5;
     --contato: #E5FCF5;
     --verde-botão: #d4f9e1;
@@ -32,7 +31,9 @@
     margin: 0 auto;
 }
 
-
+.card:hover {
+    transform: scale(1.05);
+}
 
 .titulo {
     display: flex;
@@ -41,11 +42,8 @@
     font-size: 35px;
 }
 
-
-
-
 .titulo h2 {
-    color: var(--verde-pixelV);
+    color: var(--verde-rotaS);
     margin-bottom: 0;
 
     padding: 10px 18px;
@@ -76,7 +74,8 @@ header img {
     max-width: 700px;
     width: 25%;
     display: flex;
-    justify-content: space-between;
+    
+    gap: 50px;
     color: var(--preto);
 }
 
@@ -92,13 +91,12 @@ header img {
 }
 
 .menu a:hover {
-    text-decoration-color: var(--verde-pixelV);
+    text-decoration-color: var(--verde-rotaS);
 }
 
 .conteudo-banner {
     display: flex;
-    
-    margin: 10%;
+    margin: 400px 350px 200px 100px ;
 }
 
 
@@ -115,23 +113,23 @@ header img {
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Berlin Sans FB Demi Bold", regular;
-    color: var(--verde-pixelV);
+    color: var(--verde-rotaS);
     list-style-type: none;
     padding: 0;
 
 }
 
 .container-grid button {
-    height: 60px;
+    height: 50px;
     width: 8%;
 
     background-color: var(--verde-botão);
-    color: var(--verde-pixelV);
+    color: var(--verde-rotaS);
 
     border: none;
     border-radius: 10px;
 
-    font-size: 28px;
+    font-size: 25px;
     font-family: "Berlin Sans FB Demi Bold", regular;
     font-weight: 700;
 
@@ -139,6 +137,8 @@ header img {
     cursor: pointer;
     transition: background-color 500ms;
 }
+
+
 
 /* ----------sobre---------- */
 
@@ -264,7 +264,7 @@ header img {
     flex-direction: column;
     align-items: center;
 
-    border: solid 3px var(--verde-pixelV);
+    border: solid 3px var(--verde-rotaS);
     border-radius: 40px;
     background-color: var(--contato);
 
@@ -338,7 +338,7 @@ header img {
 
 .campo input:focus,
 .campo-descricao textarea:focus{
-    outline: 2px solid var(--verde-pixelV);
+    outline: 2px solid var(--verde-rotaS);
 }
 
 #contato form button{
@@ -352,7 +352,7 @@ header img {
     border-radius: 4px;
 
     font-size: 17px;
-    font-family: "Recursive", sans-linear-bold;
+    font-family: "Berlin Sans FB Demi Bold", regular;
     font-weight: 700;
 
     text-transform: uppercase;
@@ -362,7 +362,7 @@ header img {
 }
 
 #contato form button:hover{
-    background-color: var(--verde-pixelV);
+    background-color: var(--verde-rotaS);
 }
 
 /* -----------footer-------- */
@@ -396,7 +396,7 @@ footer .container-grid{
 .redes-sociais p{
     color: var(--preto);
 
-    font-family: "Recursive", sans-linear;
+    font-family: "Berlin Sans FB Demi Bold", regular;
     font-size: 24px;
 }
 
@@ -412,8 +412,22 @@ footer .container-grid{
 }
 
 .icones-redes a:hover{
-    color: var(--verde-pixelV);
+    color: var(--verde-rotaS);
 }
+
+.atendimento p {
+    font-size: 25px;
+    font-family: "Berlin Sans FB Demi Bold", regular;
+    color: var(--preto); 
+}
+
+.atendimento {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
  /* ------- Menu Hamburguer ------------------ */
 
 .menu-fechado{
@@ -424,3 +438,5 @@ footer .container-grid{
 #icone-x{
     display: none;
 }
+
+/* ------------- Responsividade ---------------- */
